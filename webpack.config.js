@@ -30,8 +30,11 @@ module.exports = {
         options: { noquotes: true }
       },
       {
-        test: /\.(png)$/,
-        loader: 'file-loader',
+        test: /\.(png)$/i,
+        loader: 'url-loader',
+        options: {
+          limit: 2048,
+        }
       }
     ]
   }
