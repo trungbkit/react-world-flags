@@ -20,7 +20,7 @@ module.exports = {
         test: /\.(js)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        query: {
+        options: {
           presets: ['@babel/react']
         }
       },
@@ -28,6 +28,10 @@ module.exports = {
         test: /\.(svg)$/,
         loader: 'svg-url-loader',
         options: { noquotes: true }
+      },
+      {
+        test: /\.(png)$/,
+        loader: 'file-loader',
       }
     ]
   }
